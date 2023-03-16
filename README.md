@@ -1,1 +1,1 @@
-# SAGE-GCN
+# SAGEGCN
