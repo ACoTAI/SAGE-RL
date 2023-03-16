@@ -13,8 +13,6 @@ TARGET_REPLACE_ITER = 20
 MEMORY_CAPACITY = 50
 env = Env.MyEnv()
 N_ACTIONS = len(env.action_space)
-
-# -----------------------ia-contacts----------------------------
 data_row = 113
 
 N_STATES = data_row * data_row
