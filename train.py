@@ -29,7 +29,7 @@ loss_list = []
 
 class Net(nn.Module):
     def __init__(self):
-        super(Net, self).__init__()  # 等价与nn.Module.__init__()
+        super(Net, self).__init__() 
 
 
         self.fc1 = nn.Linear(N_STATES, 50)
@@ -97,7 +97,6 @@ class SAGEGCN(object):
     def learn(self):
 
         if self.learn_step_counter % TARGET_REPLACE_ITER == 0:
-            print("\n复制参数！！！\n")
             self.target_net.load_state_dict(self.eval_net.state_dict())
 
         self.learn_step_counter += 1
