@@ -1,8 +1,5 @@
-SAGE-GCN
+SAGE-GCN: Graph Convolutional Network based on Self-adaptive Stable Gate for Link Prediction in Dynamic Complex Networks
 ============================================
-
-
-
 A **PyTorch** implementation of **SAGE-GCN**. 
 
 
@@ -19,9 +16,7 @@ pandas            1.3.5
 ```
 ### Datasets
 <p align="justify">
-There are two dynamic email networks, called as ENRON and RADOSLAW, in which the nodes and edges represent the users and the e-mails.
-FB-FORUM denotes a forum network of the same online community, where edges are the activities participated by two individuals.
-    SFHH and INVS are the human contact network, which consists of persons and the real-world contact between two people.<br>
+There are two dynamic email networks, called as ENRON and RADOSLAW. Each node stands for an employee in a mid-sized company and each edge appears to represent an email being sent from one person to another. ENRON records email interactions for nearly six months and RADOSLAW lasts for nearly nine months.<br>
 http://networkrepository.com
 </p>
 
@@ -30,8 +25,9 @@ Every .edges file has the following structure:
 
 ```javascript
 from_node to_node  timestamp weight
-48 		  13 	   	 926389620   1
-67        13     926418960   1
-67        13     926418960   1
-...
-```
+    48 		13 	   926389620   1
+    67      13     926418960   1
+    67      13     926418960   1
+    68      39     926418968   0
+    ...
+
