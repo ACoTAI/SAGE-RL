@@ -22,31 +22,6 @@ train_x, train_y = Data().get_train_data(data)  # len 65
 # 测试集 list
 test_x, test_y = Data().get_test_data(data)
 
-def process_data(x, y):
-    x = torch.FloatTensor(x).reshape(-1, data_row, data_row)  # torch.Size([15, 113, 113])
-    y = torch.FloatTensor(y).reshape(-1, output_size)  # torch.Size([1, 12769])
-    x_gcn = gcn_x(x, p)  # torch.Size([15, 113, 15])
-    a_gcn = gcn_a(x, True)  # torch.Size([15, 113, 113])
-
-    input_rnn_x = x_gcn.reshape(15, -1, data_row, p)  # torch.Size([15, 1, 113, 15])
-    input_rnn_a = a_gcn.reshape(15, -1, data_row, data_row)  # torch.Size([15, 1, 113, 113])
-    input_ = (input_rnn_x, input_rnn_a)
-
-    return input_, y
-def compute_reward(y_train, y_predict):
-
-    reward = 0
-
-    for i in range(len(y_train[0])):
-        if y_train[0][i] == y_predict[0][i]:
-            reward = reward + 1
-        elif y_train[0][i] == 1 and y_predict[0][i] >= 0.5:
-            reward = reward + 1
-        else:
-            reward = reward - 1
-    return reward / (data_row * data_row)
-
-
 class MyEnv:
     def __init__(self):
         self.index = 0
