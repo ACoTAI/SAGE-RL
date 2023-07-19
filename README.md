@@ -1,6 +1,6 @@
 Robust Temporal Link Prediction in Dynamic Complex Networks via Stable Gated Networks Based on Reinforcement Learning
 ============================================
-A **PyTorch** implementation of **SAGE-GCN**. 
+A **PyTorch** implementation of **SAGE-RL**. 
 
 
 
