@@ -1,4 +1,4 @@
-SAGE-GCN: Graph Convolutional Network based on Self-adaptive Stable Gates for Link Prediction in Dynamic Complex Networks
+Robust Temporal Link Prediction in Dynamic Complex Networks via Stable Gated Networks Based on Reinforcement Learning
 ============================================
 A **PyTorch** implementation of **SAGE-GCN**. 
 
